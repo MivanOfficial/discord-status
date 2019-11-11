@@ -1,4 +1,5 @@
 import discord
+import config
 from discord.ext import commands
 from discord import Game
 
@@ -11,4 +12,4 @@ async def on_ready():
     print("Discord UserID: {}".format(bot.user.id))
     await bot.change_presence(activity=Game(name="💓Ваш статус")) 
 
-bot.run("", bot=False)
+bot.run(config.token, bot=False)
