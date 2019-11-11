@@ -12,7 +12,7 @@ async def on_ready():
     print("Discord UserID: {}".format(bot.user.id))
     
     statusTEXT = config.statusTEXT
-    activity = discord.Activity(name=stat, type=discord.ActivityType.watching)
+    activity = discord.Activity(name=statusTEXT, type=discord.ActivityType.watching)
     await bot.change_presence(status=discord.Status.online, activity=activity)
 
 bot.run(config.token, bot=False)
